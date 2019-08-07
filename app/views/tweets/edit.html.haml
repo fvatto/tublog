@@ -1,0 +1,11 @@
+.tweets
+  .tweet
+    .form
+      = form_for @tweet do |f|
+        = f.label :text, "文章"
+        = f.text_field :text
+
+        = f.label :url, "動画URL"
+        = f.text_field :url
+
+        = f.submit "Update"

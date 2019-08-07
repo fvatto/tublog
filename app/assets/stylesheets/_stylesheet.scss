@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+}
+
+.tweets {
+  color: white;
+  width: 50vw;
+  min-width: 660px;
+  margin: 0 auto;
+  .tweet {
+    background-color: red;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 20px;
+      li{
+        float: right;
+        margin-left: 7px;
+      }
+    label {  
+      color: white;
+    }
+    input[type=submit] {
+      background-color: orange;
+      border-radius: 3px;
+    }
+  }
+}
+
+.field {
+  width: 40vw;
+  margin: 0 auto;
+}
+
+.actions {
+  color: black;
+  text-align: center;
+}

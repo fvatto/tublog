@@ -1,0 +1,15 @@
+.tweet
+  .tweet__name
+    投稿者：#{tweet.user.nickname}
+  .tweet__time
+    投稿日時：#{tweet.created_at}
+  .tweet__text
+    コメント：#{tweet.text}
+  .tweet__video
+    %iframe{:allow => "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :height => "315", :src => "#{tweet.url}", :width => "560"}
+  - if user_signed_in? && current_user.id == tweet.user_id
+    %ul.tweet__menu
+      %li
+        = link_to '削除', "/tweets/#{tweet.id}", method: :delete
+      %li
+        = link_to '編集', "/tweets/#{tweet.id}/edit"
